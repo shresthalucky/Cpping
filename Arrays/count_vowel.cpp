@@ -1,23 +1,23 @@
 #include <iostream>
+#include <cctype>
 using namespace std;
 
-int countvowel(char word[20]);
+int countvowel(string word);
 
 int main(){
-	char word[20];
+	string word;
 	cout << "Enter a word : ";
-	cin >> word;
+	getline(cin, word);
 	cout << "The number of vowels is : " <<  countvowel(word) << endl;
 	return 0;
 }
 
-int countvowel(char word[20]){
+int countvowel(string word){
 	int i, count=0;
-	cout << "From function : " << word << endl;
-	for(i=0; word[i]!='\0'; i++){
-			if(word[i]=='a' || word[i]=='e' || word[i]=='i' || word[i]=='o' || word[i]=='u'){
+	for(i=0; i < word.length(); i++){
+		if(tolower(word[i])=='a' || tolower(word[i])=='e' || tolower(word[i])=='i' || tolower(word[i])=='o' || tolower(word[i])=='u'){
 				 count++;
-			}
-	}
+		}
+  }
 	return count;
 }
