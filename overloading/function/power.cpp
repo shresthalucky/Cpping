@@ -11,7 +11,7 @@ float power(float b, int p){
 }
 
 int main(){
-    cout << pow(3, 3) << endl;
-    cout << pow(1.23, 2) << endl;
+    cout << power(3, 3) << endl;
+    cout << power(1.23f, 2) << endl;
     return 0;
 }
