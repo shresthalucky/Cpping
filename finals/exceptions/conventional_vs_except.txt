@@ -1,0 +1,7 @@
+conventional error handling directly terminates the program in case of error
+returns the value that indicates the error
+don't invoke objects' desctructors before program terminates
+terminates program using exit() or abort()
+
+
+exception handling mechanism passes the information about the error from the location where error occurs to the location where error is handled. this solves the problem of communication.
